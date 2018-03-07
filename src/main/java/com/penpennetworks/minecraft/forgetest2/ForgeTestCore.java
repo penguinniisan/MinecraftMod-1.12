@@ -1,6 +1,6 @@
 package com.penpennetworks.minecraft.forgetest2;
 
-import com.penpennetworks.minecraft.forgetest2.proxy.CommonProxy;
+import com.penpennetworks.minecraft.forgetest2.proxy.ICommonProxy;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -15,7 +15,7 @@ public class ForgeTestCore {
 
     // Proxy
     @SidedProxy( clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS )
-    private static CommonProxy proxy;
+    private static ICommonProxy proxy;
 
     // Logger
     private static Logger logger;
