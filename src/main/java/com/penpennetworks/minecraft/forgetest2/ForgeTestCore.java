@@ -24,15 +24,20 @@ public class ForgeTestCore {
     @EventHandler
     public void preInit( FMLPreInitializationEvent event ){
         logger = event.getModLog();
+
+        proxy.preInit(event);
     }
 
     @EventHandler
     public void init( FMLInitializationEvent event ){
         logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
+        proxy.init(event);
     }
 
     @EventHandler
     public void postInit( FMLPostInitializationEvent event ){
+        proxy.postInit(event);
     }
 
 }
